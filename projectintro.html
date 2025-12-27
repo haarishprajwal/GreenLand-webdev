@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farmers Awareness Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e8f5e9, #f1f8e9);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+      padding: 25px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card i {
+      font-size: 40px;
+      color: #388e3c;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+    .card a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .card a:hover {
+      background-color: #388e3c;
+    }
+  </style>
+</head>
+<body>
+
+  <header style="background-color: #2e7d32; color: white; padding: 20px; text-align: center;">
+  <img src="project logo.png" alt="Greenland Logo" style="width: 120px; height: auto; margin-bottom: 10px;" />
+    <h1>Farmers Awareness Project</h1>
+    <p>Explore how farmers shape our society and the support they receive</p>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <i class="fas fa-seedling"></i>
+      <h3>Awareness Page</h3>
+      <p>Learn about the vital role farmers play in food security, economy, and culture.</p>
+      <a href="awarness.html">Explore</a>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-hand-holding-usd"></i>
+      <h3>Schemes & Benefits</h3>
+      <p>Discover government initiatives that support farmers with financial aid and resources.</p>
+      <a href="farmer_schemes.html">Explore</a>
+    </div>
+  </div>
+
+  <script src="projectintro.js"></script>
+
+</body>
+</html>

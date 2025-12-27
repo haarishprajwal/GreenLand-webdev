@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #fef8f2;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Awareness about farming</title>
+  <style>
+    :root{
+      --bg: #fef8f2;
+      --muted: #5a5048;
+      --accent: #2e7d32;
+      --container-w: 900px;
+      --article-w: 720px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%; margin:0; background:var(--bg); font-family: "Georgia", serif; color:#111;}
+    a{color:inherit}
+
+    .page{min-height:100vh; display:flex; flex-direction:column;}
+
+    nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      padding:20px 48px;
+      background:var(--bg);
+      border-bottom:1px solid rgba(0,0,0,0.06);
+    }
+
+    .nav-left{display:flex; align-items:center; gap:28px;}
+    .logo{height:65px; display:block;}
+
+    .nav-links{
+      display:flex;
+      gap:36px;
+      align-items:center;
+    }
+    .nav-links a{
+      text-decoration:none;
+      color:var(--muted);
+      font-size:18px;
+      font-weight:500;
+      transition: color .18s ease;
+    }
+    .nav-links a:hover{ color:var(--accent); }
+
+    .request-btn{
+      border:1.8px solid var(--accent);
+      color:var(--accent);
+      padding:8px 18px;
+      border-radius:8px;
+      transition: all .22s ease;
+      display:inline-flex;
+      align-items:center;
+      height:40px;
+      text-decoration:none;
+      font-weight:600;
+    }
+    .request-btn:hover{ background:var(--accent); color:#fff; }
+
+    .container{
+      width:100%;
+      max-width:var(--container-w);
+      margin:34px auto 80px;
+      padding:0 20px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+
+    h1{
+      font-size:44px;
+      line-height:1.05;
+      text-align:center;
+      margin:18px 0 28px;
+      font-weight:700;
+      letter-spacing:-0.5px;
+      color:#0e0e0e;
+    }
+
+    .divider{
+      width:100%;
+      height:1px;
+      background:linear-gradient(to right, transparent, rgba(0,0,0,0.08), transparent);
+      margin-bottom:34px;
+    }
+
+
+    .hero{
+      width:100%;
+      max-width:var(--article-w);
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow: 0 18px 40px rgba(18,18,18,0.08), inset 0 -10px 40px rgba(0,0,0,0.02);
+    }
+    .hero img{ display:block; width:100%; height:auto; }
+
+
+    .article {
+      width:100%;
+      max-width:var(--article-w);
+      margin-top:26px;
+      text-align:justify;
+      color:#222;
+      font-size:18px;
+      line-height:1.78;
+    }
+
+
+    h2, h3 {
+      text-align:left;
+      width:100%;
+      max-width:var(--article-w);
+      margin:42px auto 12px;
+      font-family:"Georgia", serif;
+      color:#111;
+    }
+    h2{ font-size:28px; font-weight:700; }
+    h3{ font-size:20px; font-weight:700; margin-top:26px; }
+
+
+    table{
+      width:100%;
+      max-width:var(--article-w);
+      border-collapse:collapse;
+      margin:20px auto 30px;
+      font-size:16px;
+    }
+    table th, table td{
+      border:1px solid rgba(0,0,0,0.08);
+      padding:14px 18px;
+      text-align:left;
+      vertical-align:top;
+    }
+    table th{
+      background:rgba(0,0,0,0.02);
+      font-weight:700;
+    }
+
+    footer{
+      background-color: #fef3e2;
+      padding:40px 60px;
+      color:#444;
+      border-top:1px solid #e0d4c0;
+      margin-top:auto;
+    }
+    .footer-container{
+      display:flex;
+      justify-content:space-between;
+      gap:30px;
+      flex-wrap:wrap;
+    }
+    .footer-section{ flex:1 1 220px; min-width:200px; }
+    .footer-section h4{ font-weight:700; margin-bottom:10px; }
+    .footer-section p, .footer-section a{ font-size:15px; color:#444; text-decoration:none; line-height:1.6; }
+    .footer-bottom{ text-align:center; font-size:14px; color:#666; margin-top:30px; border-top:1px solid #ddd; padding-top:15px; }
+
+    .socials{ margin-top:18px; display:flex; gap:12px; align-items:center; }
+    .socials img{ width:30px; display:inline-block; }
+
+    @media (max-width:980px){
+      :root{ --container-w: 92vw; }
+      h1{ font-size:34px; }
+      .nav-links{ gap:20px; }
+      nav{ padding:16px 22px; }
+    }
+    @media (max-width:720px){
+      .nav-links{ display:none; } 
+      .logo{ height:46px;}
+      h1{ font-size:26px; margin-top:10px; }
+      .article{ font-size:16px; line-height:1.6; }
+      table th, table td{ padding:10px; font-size:14px; }
+      .request-btn{ padding:7px 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    
+    <nav>
+      <div class="nav-left">
+        <img src="project logo.png" alt="GreenLand logo" class="logo">
+        <div class="nav-links" role="navigation" aria-label="primary">
+          <a href="#">Customers</a>
+          <a href="#">Blog</a>
+          <a href="#">About us</a>
+          <a href="#">Donate</a>
+        </div>
+      </div>
+
+      <a href="#" class="request-btn">Request a Call</a>
+    </nav>
+
+    <main class="container">
+      <h1>The Importance of Agriculture: The Backbone of India's Progress and Global Relevance</h1>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <figure class="hero" role="img" aria-label="Hands holding a young plant">
+        <img src="https://media.istockphoto.com/id/121198600/photo/business-development-hands-holding-seedling-in-a-group.jpg?s=612x612&w=0&k=20&c=zo_UWGtjy9KvloOc3LPGjmHMYLCfsR5xBBkEj3WBOZQ=" alt="Hands holding a plant">
+      </figure>
+
+      <p class="article">
+        Have you ever stopped for a moment—maybe while eating your favorite dal-chawal or sipping chai—and wondered where it all comes from? Or who makes sure our plates are never empty, even with a billion-plus mouths to feed?
+        Well, the answer is simple: agriculture.
+        In India, farming is more than just a job. It’s a way of life, a tradition passed down through generations, and honestly, a whole lot of hard work under the sun. It isn’t just about fields and tractors—it’s about food security, rural development, economic backbone, and even cultural identity. From the smallest tribal hamlet to the bustling cities, agriculture silently powers every aspect of our daily lives.
+        More than half of India’s population still depends on agriculture for their livelihood. Think about that—millions of families waking up before dawn, not to sit in air-conditioned offices, but to toil in fields that feed the entire nation. It’s humbling, isn’t it?
+        So, in this blog, let’s dig deeper into why agriculture is important, not just for India’s economy but for our planet’s future. From economic numbers to emotional connections, we’re covering it all. Ready to uncover the roots of India’s growth? Let’s go.
+      </p>
+
+      <h2>The Role of Agriculture in India’s Economy</h2>
+      <p class="article">
+        When someone says “agriculture,” we usually picture lush green fields, a hardworking farmer, maybe even a tractor ploughing through the soil. But did you know that agriculture contributes around 15–18% of India’s GDP? That’s no small number. And yet, this number doesn't even begin to cover the real impact of agriculture in the Indian economy.
+        More than 50% of India’s workforce is directly or indirectly employed in the agricultural sector.
+        Agriculture also fuels several other sectors, like food processing, textiles, and even pharmaceuticals. Without agriculture, these industries would be standing on shaky ground.
+      </p>
+
+      <h3>Feeding the Nation, Fueling Livelihoods</h3>
+      <p class="article">
+        Let’s take a moment and really think—where does your food come from? That fluffy roti, the steaming dal, the spicy pickles… all of it begins in a field somewhere, cultivated with patience, nurtured with care. That’s the heartbeat of India. Especially in rural India, it’s the primary source of livelihood.
+      </p>
+
+      <h2>From Soil to Soul: Types of Agriculture That Shape India</h2>
+      <p class="article">India, with its wide range of climates and cultural quirks, is home to a variety of agricultural practices. And each one? It’s got its own charm… and its own importance in building the economy.</p>
+
+      <h3>1. Subsistence Farming – Feeding Families, Preserving Traditions</h3>
+      <p class="article">In thousands of Indian villages, you’ll still find families growing food just for their own plates. This is subsistence farming, and while it might not make headlines, it plays a vital role because it ensures food security for rural households.</p>
+
+      <h3>2. Commercial Agriculture – Cash Crops, Big Impact</h3>
+      <p class="article">Move over to places like Punjab or Gujarat, and you’ll see large fields of cotton, sugarcane, or oilseeds. This is commercial agriculture—farming done for profit and a major player in India’s export economy.</p>
+
+      <h3>3. Organic Farming – Going Back to Roots</h3>
+      <p class="article">Organic farming uses natural compost and zero chemicals. With health-conscious buyers paying more, organic farmers enjoy better profits and cleaner soil.</p>
+
+      <h3>4. Agroforestry – When Trees and Crops Work Together</h3>
+      <p class="article">Growing trees and crops together improves soil, stores carbon, and boosts resilience — a powerful climate-smart method.</p>
+
+      <h3>5. Aquaculture – Farming the Waters</h3>
+      <p class="article">In coastal states, aquaculture (fish farming) boosts rural incomes and eases pressure on wild fisheries.</p>
+
+      <h2>Quick Comparison Table: Major Agricultural Types in India</h2>
+      <table>
+        <tr>
+          <th>Type of Agriculture</th>
+          <th>Purpose</th>
+          <th>Economic Role</th>
+          <th>Sustainability</th>
+        </tr>
+        <tr>
+          <td>Subsistence Farming</td>
+          <td>Self-consumption</td>
+          <td>Food security, local employment</td>
+          <td>High (low chemical input)</td>
+        </tr>
+        <tr>
+          <td>Commercial Farming</td>
+          <td>Market profit</td>
+          <td>Export, industrial input</td>
+          <td>Moderate</td>
+        </tr>
+        <tr>
+          <td>Organic Farming</td>
+          <td>Health & Sustainability</td>
+          <td>Premium market income</td>
+          <td>Very High</td>
+        </tr>
+        <tr>
+          <td>Agroforestry</td>
+          <td>Climate resilience</td>
+          <td>Timber + crop revenue</td>
+          <td>Very High</td>
+        </tr>
+        <tr>
+          <td>Aquaculture</td>
+          <td>Aquatic food production</td>
+          <td>Rural employment, exports</td>
+          <td>Moderate High</td>
+        </tr>
+      </table>
+
+      <h2>Where Tradition Meets Tomorrow: Agriculture at Swasya Living</h2>
+      <p class="article">At Swasya Living, we don’t just talk about agriculture—we live it. Our community-led farmland project blends sustainable practices with community values to grow food and a way of life.</p>
+    </main>
+
+    
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <img src="project logo.jpg" alt="GreenLand logo" style="width:120px;">
+          <p>Where nature, comfort, and innovation come together — beautifully managed, effortlessly yours.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Learn More</h4>
+          <a href="#">Customers</a><br>
+          <a href="#">Contact Us</a><br>
+          <a href="#">About Us</a><br>
+          <a href="#">Privacy Policy</a>
+        </div>
+
+        <div class="footer-section">
+          <h4>Projects</h4>
+          <a href="#">Sannidhi Ecofarms</a><br>
+          <a href="#">Sahya</a>
+        </div>
+
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <a href="#">Blog</a><br>
+          <a href="#">ROI Calculator</a><br>
+          <a href="#">Videos</a>
+        </div>
+      </div>
+
+      <div class="socials" aria-hidden="false">
+        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Logo_de_Facebook.png/1028px-Logo_de_Facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?semt=ais_incoming&w=740&q=80" alt="X"></a>
+        <a href="#"><img src="https://unblast.com/wp-content/uploads/2025/07/instagram-logo-colored.jpg" alt="Instagram"></a>
+        <a href="#"><img src="https://cdn.mos.cms.futurecdn.net/R4DgSdP6erUexko5KuX6UF.jpg" alt="YouTube"></a>
+      </div>
+
+      <div class="footer-bottom">
+        © 2025 GreenLand. All Rights Reserved.
+      </div>
+    </footer>
+  </div>
+
+  <script src="awareness.js"></script>
+
+</body>
+</html>

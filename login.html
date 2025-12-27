@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Greenland</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+      background-color: #fff8f0; 
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff8f0;
+      padding: 20px 60px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .logo h1 {
+      color: #124d2f;
+      font-size: 22px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #124d2f;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #2d8659;
+    }
+
+    .request-btn {
+      border: 2px solid #2d8659;
+      background: none;
+      color: #2d8659;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .request-btn:hover {
+      background-color: #2d8659;
+      color: #fff;
+    }
+
+    
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 100px);
+    }
+
+    .login-card {
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      width: 380px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #124d2f;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    .input-group {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 5px;
+      color: #2c3e50;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    input:focus, select:focus {
+      border-color: #2d8659;
+      outline: none;
+      box-shadow: 0 0 5px rgba(45, 134, 89, 0.3);
+    }
+
+    .btn {
+      background-color: #2d8659;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+      margin-top: 5px;
+    }
+
+    .btn:hover {
+      background-color: #236b47;
+    }
+
+    .register-text {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .register-text a {
+      color: #2d8659;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .register-text a:hover {
+      text-decoration: underline;
+    }
+
+    
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
+
+</head>
+<body>
+
+ 
+  <header>
+    <div class="logo">
+      <img src="project logo.png" alt="logo" />
+      <h1>GREENLAND</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#">Customers</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Donate</a></li>
+      </ul>
+    </nav>
+
+    <button class="request-btn">Request a Call</button>
+  </header>
+
+  
+  <div class="container">
+    <div class="login-card">
+      <h2>Welcome Back 🌱</h2>
+      <p>Login to continue your journey with <strong>Greenland</strong></p>
+
+      <form action="projectintro.html">
+        
+        <div class="input-group">
+          <label for="role">Select Role</label>
+          <select id="role" required>
+            <option value="" disabled selected>Select your role</option>
+            <option value="admin">Admin</option>
+            <option value="farmer">Farmer</option>
+            <option value="expert">Agricultural Expert</option>
+            <option value="public">Public</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="you@example.com" required />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required />
+        </div>
+
+        <button type="submit" class="btn">Login</button>
+
+        
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Greenland | Empowering Sustainable Agriculture
+  </footer>
+
+  <script src="login.js"></script>
+
+</body>
+</html>
